@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontak | Media Belajar</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
+    <style type="text/css">
+        #wrapper {
+            padding: 40px;
+            font-family: 'Century Gothic';
+            font-size: 24px;
+        }
+        
+        #isi_wrapper {
+            padding: 15px;
+            width: 95%;
+            margin: auto;
+        }
+        
+        .kotak_wrapper {
+            padding: 20px;
+            margin-right: 20px;
+            margin-top: 15px;
+            background-color: white;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+            font-family: 'Century Gothic';
+            font-size: 16px;
+        }
+        
+        .span_kontak {
+            margin-left: 20%;
+            text-align: left;
+        }
+        
+        #kontak p {
+            padding: 2px;
+        }
+        
+        #kontak p:not(:nth-child(4)) {
+            border-bottom: 1px solid black;
+        }
+        
+        #sosmed {
+            font-size: 30px;
+        }
+        
+        .lbl_form:not(:first-child) {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        
+        #form_tanya {
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        #form_tanya input,
+        #form_tanya textarea {
+            padding: 7px;
+            width: 95%;
+        }
+        
+        #kirim_form {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="image/logo t.png" style="width:11%">
+        <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
+    </div>
+
+    <div id="navbar">
+        <a href="home.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="javascript:void(0)">Kursus Saya</a>
+        <a href="about.html">Tentang</a>
+        <div class="dropdown">
+            <button class="dropbtn">Indonesia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Indonesia</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div id="wrapper">
+            <h1>Hubungi Kami</h1>
+            <div id="isi_wrapper" class="baris">
+                <div class="kol-4">
+                    <div id="alamat" class="kotak_wrapper">
+                        <h3>Alamat</h3>
+                        <p>
+                            Jl Yang Benar no.100, Perum. Budidaya, Sumbersari 163002, Jember, Jawa Timur
+                        </p>
+                    </div>
+
+                    <div id="kontak" class="kotak_wrapper">
+                        <h3>Kontak</h3>
+
+                        Hubungi kami melalui:
+                        <p class="baris">
+                            <span class="kol-2 kol-m-2">Telepon</span> <span class="kol-6 kol-m-5 span_kontak">+6281
+                                2345 6789</span>
+                        </p>
+                        <p class="baris">
+                            <span class="kol-2 kol-m-2">Email</span> <span class="kol-6 kol-m-5 span_kontak">info@mediabelajar.com</span>
+                        </p>
+                        <p>
+                            Sosial Media
+                            <div id="sosmed">
+                                <a href="https://facebook.com/mediabelajar" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>&ensp;
+                                <a href="https://twitter.com/mediabelajar" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>&ensp;
+                                <a href="https://youtube.com/mediabelajar" target="_blank"><i
+                                        class="fab fa-youtube"></i></a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="kol-8">
+                    <div class="kotak_wrapper">
+                        <h3>Tanyakan</h3>
+                        <p>
+                            Jika terdapat pertanyaan seputar MediaBelajar, silahkan isi formulir di bawah ini
+                        </p>
+                        <form id="form_tanya">
+                            <label class="lbl_form">Nama</label>
+                            <input type="text" name="nama">
+
+                            <label class="lbl_form">Email</label>
+                            <input type="email" name="email">
+
+                            <label class="lbl_form">Nomor HP</label>
+                            <input type="text" name="no_hp">
+
+                            <label class="lbl_form">Subjek</label>
+                            <input type="text" name="subjek">
+
+                            <label class="lbl_form">Pertanyaan atau Pesan</label>
+                            <textarea rows="5"></textarea>
+
+                            <div id="kirim_form">
+                                <a onclick="href='contact.html'" class="button info">Kirim</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot-col">
+            <h4>Tentang Media Belajar</h4>
+
+            <li><a href="about.html">Tentang kami</a></li>
+            <li><a href="contact.html">Kontak kami</a></li>
+
+        </div>
+
+        <div class="foot-col">
+            <div class="foot-col-in">
+                <!-- <div id="ft"> -->
+                <li><a href="syarat.html">Syarat dan Ketentuan</a></li>
+                <li><a href="kebijakan.html">Kebijakan Privasi</a></li>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-line">
+        <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
+        <div id="social_media">
+            <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
+            <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
+            <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>

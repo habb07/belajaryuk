@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header {
+    left: 60px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Century Gothic';
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #27323A;
+    font-family: 'Century Gothic';
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Century Gothic';
+}
+
+#navbar a:hover {
+    background-color: #313F49;
+}
+
+#navbar a.active {
+    background-color: #6699FF;
+    color: white;
+    height: 52px;
+}
+
+.content {
+    padding: 16px;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Century Gothic';
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #313F49;
+    min-width: 160px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #313F49;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Century Gothic';
+    border-radius: 6px;
+}
+
+.success {
+    background-color: #4CAF50;
+}
+
+
+/* Green */
+
+.success:hover {
+    background-color: #46a049;
+}
+
+.info {
+    background-color: #2196F3;
+}
+
+
+/* Blue */
+
+.info:hover {
+    background: #0b7dda;
+}
+
+.warning {
+    background-color: #ff9800;
+}
+
+
+/* Orange */
+
+.warning:hover {
+    background: #e68a00;
+}
+
+.danger {
+    background-color: #f44336;
+}
+
+
+/* Red */
+
+.danger:hover {
+    background: #da190b;
+}
+
+.default {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+
+/* Gray */
+
+.default:hover {
+    background: #ddd;
+}

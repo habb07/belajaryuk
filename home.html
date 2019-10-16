@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Media Belajar</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
+    <style>
+        #logo_wrapper {
+            width: 20%;
+            margin: auto;
+        }
+        
+        #row1 {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        #row2 {
+            padding: 10px;
+        }
+        
+        #t {
+            text-align: left;
+            margin-left: 80px;
+        }
+        
+        #gr-btn {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="image/logo t.png" style="width:11%">
+        <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
+    </div>
+
+    <div id="navbar">
+
+        <a class="active" href="home.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="javascript:void(0)">Kursus Saya</a>
+        <a href="about.html">Tentang</a>
+        <div class="dropdown">
+            <button class="dropbtn">Indonesia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Indonesia</a>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="image/1.png" style="width:100%">
+            <div class="text">Selamat Datang <br>di Media Belajar</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/2.png" style="width:100%">
+            <div class="text">Belajar berbasis online</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/3.png" style="width:100%">
+            <div class="text">Menciptakan suasana belajar yang nyaman</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="main-body">
+        <div id="row1">
+            <div id="logo_wrapper">
+                <img src="image/logo t.png" style="align-content: center;">
+            </div>
+            <p>Media Belajar adalah sarana proses belajar mengajar dari universitas terbuka, <br> dan media ini untuk mendorong adanya kemajuan teknologi untuk proses belajar <br> mengajar tanpa harus tatap muka.</p>
+            <a class="buttonlt" href="about.html"><span>Baca selanjutnya </span></a>
+        </div>
+        <div id="row2">
+            <div id="t">
+                <h3 style="font-family: 'Century Gothic';">Kursus</h3>
+            </div>
+            <div id="gr-btn">
+                <button class="btn"><span>Fakultas Teknik</span></button>
+                <button class="btn"><span>Fakultas Ilmu Komputer</span></button>
+                <button class="btn"><span>Fakultas Kedokteran</span></button>
+                <button class="btn"><span>Fakultas MIPA</span></button>
+                <button class="btn"><span>Fakultas Ilmu Budaya</span></button>
+                <button class="btn"><span>Fakultas Hukum</span></button>
+                <button class="btn"><span>Fakultas Keperawatan</span></button>
+                <button class="btn"><span>Fakultas Pertanian</span></button>
+                <button class="btn"><span>Fakultas Kesehatan</span></button>
+                <button class="btn"><span>Fakultas Kedokteran Gigi</span></button>
+                <button class="btn"><span>FEB</span></button>
+                <button class="btn"><span>FISIP</span></button>
+            </div>
+        </div>
+        <br>
+
+        <div class="footer">
+            <div class="foot-col">
+                <h4>Tentang Media Belajar</h4>
+
+                <li><a href="about.html">Tentang kami</a></li>
+                <li><a href="contact.html">Kontak kami</a></li>
+
+            </div>
+
+            <div class="foot-col">
+                <div class="foot-col-in">
+                    <!-- <div id="ft"> -->
+                    <li><a href="syarat.html">Syarat dan Ketentuan</a></li>
+                    <li><a href="kebijakan.html">Kebijakan Privasi</a></li>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom-line">
+            <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
+            <div id="social_media">
+                <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
+                <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
+                <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+
+
+        <script src="js/navbar.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>

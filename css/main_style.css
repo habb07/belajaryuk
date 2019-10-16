@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+.baris:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 100%;
+    max-height: 426px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    background-color: hsl(0, 0%, 23%);
+    color: #f2f2f2;
+    font-size: 36px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 75px;
+    bottom: 213px;
+    width: 550px;
+    text-align: center;
+    font-family: 'Century Gothic';
+    border-radius: 6px;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.main-body {
+    /*background-color: #dfe4ea;*/
+    background-color: white;
+    overflow: hidden;
+    /*padding: 0px;*/
+}
+
+.main-body:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    width: 75%;
+    height: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: rgba(225, 225, 225, 0.5);
+    overflow: hidden;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/*Media Quary*/
+
+@media only screen and (min-width: 600px) {
+    .kol-m-1 {
+        float: left;
+        width: 8.33%;
+    }
+    .kol-m-2 {
+        float: left;
+        width: 16.66%;
+    }
+    .kol-m-3 {
+        float: left;
+        width: 25%;
+    }
+    .kol-m-4 {
+        float: left;
+        width: 33.33%;
+    }
+    .kol-m-5 {
+        float: left;
+        width: 41.66%;
+    }
+    .kol-m-6 {
+        float: left;
+        width: 50%;
+    }
+    .kol-m-7 {
+        float: left;
+        width: 58.33%;
+    }
+    .kol-m-8 {
+        float: left;
+        width: 66.66%;
+    }
+    .kol-m-9 {
+        float: left;
+        width: 75%;
+    }
+    .kol-m-10 {
+        float: left;
+        width: 83.33%;
+    }
+    .kol-m-11 {
+        float: left;
+        width: 91.66%;
+    }
+    .kol-m-12 {
+        float: left;
+        width: 100%;
+    }
+    .card {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .kol-1 {
+        float: left;
+        width: 8.33%;
+    }
+    .kol-2 {
+        float: left;
+        width: 16.66%;
+    }
+    .kol-3 {
+        float: left;
+        width: 25%;
+    }
+    .kol-4 {
+        float: left;
+        width: 33.33%;
+    }
+    .kol-5 {
+        float: left;
+        width: 41.66%;
+    }
+    .kol-6 {
+        float: left;
+        width: 50%;
+    }
+    .kol-7 {
+        float: left;
+        width: 58.33%;
+    }
+    .kol-8 {
+        float: left;
+        width: 66.66%;
+    }
+    .kol-9 {
+        float: left;
+        width: 75%;
+    }
+    .kol-10 {
+        float: left;
+        width: 83.33%;
+    }
+    .kol-11 {
+        float: left;
+        width: 91.66%;
+    }
+    .kol-12 {
+        float: left;
+        width: 100%;
+    }
+    .card {
+        width: 50%;
+    }
+}
+
+
+/* read more */
+
+.buttonlt {
+    border-radius: 4px;
+    background-color: #6699FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 175px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttonlt span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.buttonlt span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonlt:hover span {
+    padding-right: 25px;
+}
+
+.buttonlt:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* btn kursus */
+
+.btn {
+    border-radius: 4px;
+    background-color: #ddd;
+    border: none;
+    color: black;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6699FF;
+    color: white;
+}
+
+
+/* icon */
+
+
+/* .fa {
+    padding: 10px;
+    font-size: 0px;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+} */
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}

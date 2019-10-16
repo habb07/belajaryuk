@@ -2,28 +2,98 @@
 <html>
 
 <head>
-	<link rel="icon" type="image/png" href="image/logo.png">
-	<title>
-		Tentang
-	</title>
+    <title>Tentang | Media Belajar</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
+    <style>
+        #logo_wrapper {
+            width: 20%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        #row1 {
+            text-align: center;
+            padding: 10px;
+            font-family: 'Century Gothic';
+        }
+    </style>
 </head>
-<img src="image/logo.png" alt="gambar tidak bisa muncul :p" width="30">
-<center>
-	<h1>Tentang Kami</h1>
-</center>
 
 <body>
-	<center>
-		<center>
-			<h2>Media Belajar</h2>
-			<form>
-				<p>Media Belajar adalah sarana proses belajar mengajar dari universitas terbuka,<br>
-					dan media ini untuk mendorong adanya kemajuan teknologi untuk proses belajar<br>
-					mengajar tanpa harus tatap muka. Media Belajar dipakai untuk semua civitas<br>
-					akademik dalam universitas terbuka.
-				</p>
-		</center>
-	</center>
+
+    <div class="header">
+        <img src="image/logo t.png" style="width:11%">
+        <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
+    </div>
+
+    <div id="navbar">
+        <a href="home.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="javascript:void(0)">Kursus Saya</a>
+        <a class="active" href="about.html">Tentang</a>
+        <div class="dropdown">
+            <button class="dropbtn">Indonesia
+				<i class="fa fa-caret-down"></i>
+			</button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Indonesia</a>
+            </div>
+        </div>
+    </div>
+    <img src="image/t.png" alt="tentang" style="width:100%;">
+    <br>
+    <div class="main-body">
+        <div id="row1">
+            <div id="logo_wrapper">
+                <img src="image/logo t.png" style="align-content: center;">
+            </div>
+            <p>Media Belajar adalah sarana proses belajar mengajar dari universitas terbuka, <br> dan media ini untuk mendorong adanya kemajuan teknologi untuk proses belajar <br> mengajar tanpa harus tatap muka. Media Belajar dipakai untuk semua civitas
+                <br> akademik dalam universitas terbuka.
+            </p>
+        </div>
+
+        <div class="footer">
+            <div class="foot-col">
+                <h4>Tentang Media Belajar</h4>
+
+                <li><a href="about.html">Tentang kami</a></li>
+                <li><a href="contact.html">Kontak kami</a></li>
+
+            </div>
+
+            <div class="foot-col">
+                <div class="foot-col-in">
+                    <!-- <div id="ft"> -->
+                    <li><a href="syarat.html">Syarat dan Ketentuan</a></li>
+                    <li><a href="kebijakan.html">Kebijakan Privasi</a></li>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom-line">
+            <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
+            <div id="social_media">
+                <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
+                <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
+                <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+
+
+        <script src="js/navbar.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+
 </body>
 
 </html>
