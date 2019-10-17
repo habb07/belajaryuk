@@ -21,6 +21,36 @@ img {
     clear: both;
 }
 
+#kategori {
+    float: right;
+}
+
+#urutan {
+    float: right;
+    bottom: 100px;
+}
+
+#jdl {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#kanan1 a {
+    color: white;
+}
+
+#kanan3 {
+    right: 1000;
+}
+
+#kanan3 h3 {
+    color: white;
+}
+
+#kr {
+    padding-left: 15px;
+}
+
 
 /* Slideshow container */
 
@@ -153,6 +183,100 @@ img {
     }
 }
 
+.buttonlt {
+    border-radius: 4px;
+    background-color: #6699FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 175px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttonlt span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.buttonlt span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonlt:hover span {
+    padding-right: 25px;
+}
+
+.buttonlt:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* btn kursus */
+
+.btn {
+    border-radius: 4px;
+    background-color: #ddd;
+    border: none;
+    color: black;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6699FF;
+    color: white;
+}
+
+
+/* icon */
+
+
+/* .fa {
+    padding: 10px;
+    font-size: 0px;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+} */
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+a {
+    text-decoration: none
+}
+
 
 /* On smaller screens, decrease text size */
 
@@ -277,93 +401,3 @@ img {
 
 
 /* read more */
-
-.buttonlt {
-    border-radius: 4px;
-    background-color: #6699FF;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-    width: 175px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.buttonlt span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.buttonlt span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.buttonlt:hover span {
-    padding-right: 25px;
-}
-
-.buttonlt:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-
-/* btn kursus */
-
-.btn {
-    border-radius: 4px;
-    background-color: #ddd;
-    border: none;
-    color: black;
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #6699FF;
-    color: white;
-}
-
-
-/* icon */
-
-
-/* .fa {
-    padding: 10px;
-    font-size: 0px;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-} */
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    color: white;
-}
-
-.fa-twitter {
-    color: white;
-}
-
-.fa-youtube {
-    color: white;
-}

@@ -35,6 +35,7 @@
             border: none;
             padding: 10px;
             font-size: 16px;
+            border-radius: 6px;
         }
         
         #eror_login {
@@ -62,12 +63,12 @@
 
 <body>
     <div class="header">
-        <img src="image/logo t.png" style="width:11%">
+        <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
         <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
     </div>
 
     <div id="navbar">
-        <a href="home.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="index.html"><img src="icon/home.png" style="width:69%"></a>
         <a href="javascript:void(0)">Kursus Saya</a>
         <a href="about.html">Tentang</a>
         <div class="dropdown">
@@ -94,13 +95,13 @@
             </form>
             <div id="div_register">
                 <a onclick="href='dashboard.html'" class="button info">Masuk</a>
-                <a onclick="href='daftar.html'" class="button danger">Lupa Password</a>
+                <a onclick="href='forget_pass.html'" class="button danger">Lupa Password</a>
             </div>
         </div>
 
-        <div id="eror_login">
+        <!-- <div id="eror_login">
             <p><b>Email atau Password salah. Coba lagi</b></p>
-        </div>
+        </div> -->
     </div>
 
     <div class="footer">
@@ -115,8 +116,8 @@
         <div class="foot-col">
             <div class="foot-col-in">
                 <!-- <div id="ft"> -->
-                <li><a href="syarat.html">Syarat dan Ketentuan</a></li>
-                <li><a href="kebijakan.html">Kebijakan Privasi</a></li>
+                <li><a href="requirement.html">Syarat dan Ketentuan</a></li>
+                <li><a href="policy.html">Kebijakan Privasi</a></li>
                 <!-- </div> -->
             </div>
         </div>
