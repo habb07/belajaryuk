@@ -5,6 +5,7 @@ body {
 
 .header {
     left: 60px;
+    width: 100%;
     background-color: #f1f1f1;
     padding: 20px;
     text-align: left;
@@ -15,6 +16,14 @@ body {
     overflow: hidden;
     background-color: #27323A;
     font-family: 'Century Gothic';
+    width: 100%;
+}
+
+#open_menu {
+    padding: 10px 14px;
+    background-color: #27323A;
+    color: white;
+    display: none;
 }
 
 #navbar a {
@@ -92,7 +101,8 @@ body {
     border: none;
     color: white;
     padding: 14px 28px;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1vw;
     cursor: pointer;
     font-family: 'Century Gothic';
     border-radius: 6px;
@@ -152,4 +162,48 @@ body {
 
 .default:hover {
     background: #ddd;
+}
+
+@media only screen and (max-width: 500px) {
+    #navbar {
+        display: none;
+    }
+    #open_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #navbar.responsive {
+        display: block;
+        position: relative;
+        text-align: left;
+        float: none;
+    }
+    #navbar.responsive a {
+        display: block;
+        float: none;
+        text-align: left;
+        overflow: hidden;
+    }
+    #navbar.responsive a:first-child {
+        width: 15%;
+    }
+    #navbar.responsive a img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .dropdown {
+        display: block;
+        float: none;
+        position: relative;
+        text-align: left;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        float: none;
+        position: relative;
+        text-align: left;
+    }
 }

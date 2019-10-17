@@ -102,12 +102,15 @@ img {
 .text {
     background-color: hsl(0, 0%, 23%);
     color: #f2f2f2;
-    font-size: 36px;
+    /*font-size: 36px;*/
+    font-size: 2vw;
     padding: 8px 12px;
     position: absolute;
     left: 75px;
-    bottom: 213px;
-    width: 550px;
+    /*bottom: 213px;*/
+    bottom: 40%;
+    /*width: 550px;*/
+    width: 30%;
     text-align: center;
     font-family: 'Century Gothic';
     border-radius: 6px;
@@ -285,6 +288,17 @@ a {
     .next,
     .text {
         font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .text {
+        font-size: 2.5vw;
+        width: 25%;
+    }
+    #logtbtn {
+        font-size: 2.5vw;
+        width: 25%;
     }
 }
 

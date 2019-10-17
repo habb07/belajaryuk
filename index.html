@@ -34,6 +34,12 @@
         #gr-btn {
             text-align: center;
         }
+        
+        .text {
+            /*font-size: 2vw;*/
+            /*width: 35%;*/
+            /*position: absolute;*/
+        }
     </style>
 </head>
 
@@ -41,14 +47,15 @@
 
     <div class="header">
         <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
-        <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
+        <a id="logbtn" class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
     </div>
 
-    <div id="navbar">
+    <a href="#" id="open_menu"><i class="fas fa-bars"></i></a>
+    <div id="navbar" class="null">
         <a class="active" href="index.html"><img src="icon/home.png" style="width:69%"></a>
         <a href="javascript:void(0)">Kursus Saya</a>
         <a href="about.html">Tentang</a>
-        <div class="dropdown">
+        <div class="dropdown" id="drpdwn">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -144,9 +151,22 @@
 
 
 
-        <script src="js/navbar.js"></script>
-        <script src="js/slideshow.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- <script src="js/navbar.js"></script> -->
+        <script src="js/slideshow.js"></script>
+        <script type="text/javascript">
+            $("#open_menu").click(function(event) {
+                event.preventDefault();
+                console.log("TEs");
+                if ($("#navbar").attr('class') === "null") {
+                    $("#navbar").addClass('responsive');
+                    $("#drpdwn").addClass('responsive');
+                } else {
+                    $("#navbar").removeClass('responsive');
+                    $("#drpdwn").removeClass('responsive');
+                }
+            })
+        </script>
 </body>
 
 </html>
