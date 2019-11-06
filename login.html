@@ -90,53 +90,62 @@
                 <div id="judul_form">
                     <h2>Masuk</h2>
                 </div>
-                <input type="email" name="email" placeholder="Username" autofocus="" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="text" name="usname" placeholder="Username" autofocus="" required><br>
+                <input type="password" name="pass" placeholder="Password" required><br>
             </form>
             <div id="div_register">
-                <a onclick="href='dashboard.html'" class="button info">Masuk</a>
-                <a onclick="href='forget_pass.html'" class="button danger">Lupa Password</a>
+                <a id="btn_masuk" class="button info">Masuk</a>
+                <a href="forget_pass.html" class="button danger">Lupa Password</a>
             </div>
         </div>
 
-        <!-- <div id="eror_login">
-            <p><b>Email atau Password salah. Coba lagi</b></p>
-        </div> -->
-    </div>
+        <div class="footer">
+            <div class="foot-col">
+                <h4>Tentang Media Belajar</h4>
 
-    <div class="footer">
-        <div class="foot-col">
-            <h4>Tentang Media Belajar</h4>
+                <li><a href="about.html">Tentang kami</a></li>
+                <li><a href="contact.html">Kontak kami</a></li>
 
-            <li><a href="about.html">Tentang kami</a></li>
-            <li><a href="contact.html">Kontak kami</a></li>
+            </div>
 
-        </div>
-
-        <div class="foot-col">
-            <div class="foot-col-in">
-                <!-- <div id="ft"> -->
-                <li><a href="requirement.html">Syarat dan Ketentuan</a></li>
-                <li><a href="policy.html">Kebijakan Privasi</a></li>
-                <!-- </div> -->
+            <div class="foot-col">
+                <div class="foot-col-in">
+                    <!-- <div id="ft"> -->
+                    <li><a href="requirement.html">Syarat dan Ketentuan</a></li>
+                    <li><a href="policy.html">Kebijakan Privasi</a></li>
+                    <!-- </div> -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="bottom-line">
-        <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
-        <div id="social_media">
-            <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
-            <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
-            <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+        <div id="bottom-line">
+            <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
+            <div id="social_media">
+                <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
+                <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
+                <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
-    </div>
 
 
 
-    <script src="js/navbar.js"></script>
-    <script src="js/slideshow.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            $("#btn_masuk").click(function(event) {
+                event.preventDefault();
+                var usname = $("input[name='usname']").val();
+                var pass = $("input[name='pass']").val();
+                if (usname == "" || pass == "") {
+                    alert('Harap isi username dan password untuk login');
+                } else if (usname == "admin" && pass == "admin") {
+                    document.location.href = "dashboardAdmin.html";
+                } else {
+                    document.location.href = "dashboard.html";
+                }
+            });
+        </script>
 </body>
 
 </html>

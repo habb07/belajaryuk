@@ -90,16 +90,13 @@
                     <h2>Perubahan Password</h2>
                 </div>
                 <text>Masukkan User ID Anda (NIM/Username) :</text>
-                <input type="username" name="username" placeholder="Username" autofocus=""><br>
+                <input type="text" name="usname" placeholder="Username" autofocus="" required><br>
             </form>
             <div id="div_register">
-                <a onclick="href='login.html'" class="button success">Kirim</a>
+                <a href="login.html" id="btn_forget" class="button success">Kirim</a>
             </div>
         </div>
 
-        <!-- <div id="eror_login">
-            <p><b>Email atau Password salah. Coba lagi</b></p>
-        </div> -->
     </div>
 
     <div class="footer">
@@ -135,6 +132,17 @@
     <script src="js/navbar.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $("#btn_forget").click(function(event) {
+            event.preventDefault();
+            var usname = $("input[name='usname']").val();
+            if (usname == "") {
+                alert('Harap isi username');
+            } else {
+                document.location.href = "login.html";
+            }
+        });
+    </script>
 </body>
 
 </html>
