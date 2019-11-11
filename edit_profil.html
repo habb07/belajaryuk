@@ -78,7 +78,13 @@
 <body>
     <div class="header">
         <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
-        <a class="button info" style="float: right;" onclick="href='profil.html'"><img src="icon/user.png" style="width:13%"> Habibullah Dzaky M</a>
+        <div class="dropdown">
+            <button class="button info" id="dropbtnpf" onclick="myButton()"><img src="icon/user.png" style="width:13%"> Habibullah Dzaky M</button>
+            <div class="droppf-content" id="myDropdown">
+                <a href="profil.html">Profil</a>
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
     </div>
 
     <div id="navbar">
@@ -166,6 +172,7 @@
 
     <script src="js/navbar.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/btnpf.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
 </body>
 
