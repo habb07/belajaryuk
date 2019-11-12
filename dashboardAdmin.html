@@ -13,101 +13,29 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
     <style type="text/css">
-        #wrapper {
-            padding: 40px;
-            font-family: 'Century Gothic';
-            font-size: 24px;
-        }
-
-        #isi_wrapper {
-            padding: 15px;
-            width: 95%;
-            margin: auto;
-        }
-
-        .kotak_wrapper {
-            padding: 20px;
-            margin-right: 20px;
-            margin-top: 15px;
-            background-color: #6699FF;
-            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
-            font-family: 'Century Gothic';
-            font-size: 16px;
-            border-radius: 6px;
-        }
-
-        .kotak_wrapper2 {
-            padding: 20px;
-            margin-right: 20px;
-            margin-top: 15px;
-            background-color: white;
-            font-family: 'Century Gothic';
-            font-size: 16px;
-            border-radius: 6px;
-        }
-
-        .kotak_wrapper3 {
-            padding: 20px;
-            margin-right: 20px;
-            margin-top: 15px;
-            background-color: white;
-            font-family: 'Century Gothic';
-            font-size: 16px;
-            border-radius: 6px;
-            border: 1px solid #dbdbdb;
-        }
-
-        #kanan1 p, h3 {
-            padding: 2px;
-            border-bottom: 1px solid white;
-            color: white;
-        }
-
-        .search,
-        .select_k {
-            width: 150px;
-            /* margin-left: 150px; */
-            padding: 8px 15px;
-            background: white;
-            border: 0px solid #dbdbdb;
-            border-radius: 6px;
-        }
-
-        .select_fl {
-            width: 150px;
-            /* margin-left: 150px; */
-            padding: 8px 15px;
-            background: #6699FF;
-            border: 0px solid #dbdbdb;
-            border-radius: 6px;
-        }
-
         .kalender {
             width: 200px;
-            /* margin: auto; */
         }
-
+        
         .kalender h3 {
             color: white;
         }
-
+        
         th {
-            /* padding: 10px; */
             background-color: orange;
             color: white;
             font-family: calibri
         }
-
+        
         td {
             text-align: center;
-            /* padding: 10px 0; */
             background-color: white;
         }
-
+        
         #red {
             color: red;
         }
-
+        
         h1 {
             text-align: center;
             font-family: calibri
@@ -131,7 +59,7 @@
     <div id="navbar">
         <a href="dashboardAdmin.html"><img src="icon/home.png" style="width:69%"></a>
         <a class="active" href="javascript:void(0)">Kursus Saya</a>
-        <a href="about.html">Tentang</a>
+        <a href="about_admin.html">Tentang</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -145,13 +73,14 @@
 
     <div class="main-body">
         <div id="wrapper">
-            <text id="jdl">Kursus</text>
+            <text id="jdl">Dasbor Admin</text>
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
-                        <text>Pencarian Kursus :
+                        <text id="top">Pencarian Kursus :
                             <input class="search" type="text" placeholder="Cari" required>
                         </text>
+                        <a href="add_courses.html"><button class="buttont danger" id="btntmbh" >Tambahkan Kursus</button></a>
                         <div class="kotak_wrapper2">
                             <select class="select_fl">
                                 <option value="fl1" selected>Semua</option>
@@ -166,6 +95,12 @@
                                     </select></text>
                             </div>
                             <div class="kotak_wrapper3">
+                                <text>Kalkulus 1</text>
+                            </div>
+                            <div class="kotak_wrapper3">
+                                <text>Kalkulus 2</text>
+                            </div>
+                            <div class="kotak_wrapper3">
                                 <text>Perancangan Website</text>
                             </div>
                             <div class="kotak_wrapper3">
@@ -174,6 +109,10 @@
                             <div class="kotak_wrapper3">
                                 <text>Pengukuran dan Implementasi Perangkat Lunak</text>
                             </div>
+                            <div class="kotak_wrapper3">
+                                <text>Teknik Robotika dan Vision</text>
+                            </div>
+
                             <br>
                             <text>Tampilkan :</text>
                             <select class="select_fl">
@@ -186,15 +125,17 @@
                 </div>
                 <div class="kol-4">
                     <div id="kanan1" class="kotak_wrapper">
-                        <h3 class="baris"><a href="dashboardAdmin.html">Dasbor</a></h3>
+                        <p class="baris" id="db"><b><a href="dashboard.html">Dasbor</a></b></p>
                         <p class="baris"><a href="index.html">Beranda Situs</a></p>
                         <p class="baris">Kalender</p>
-                        <p class="baris">Timeline</p>
                         <p class="baris">Kursus yang ada</p>
                         <div id="kr">
+                            <p>Kalkulus 1</p>
+                            <p>Kalkulus 2</p>
                             <p>Perancangan Website</p>
                             <p>Pemrograman Berbasis Framework</p>
                             <p>Pengukuran dan Implementasi Perangkat Lunak</p>
+                            <p>Teknik Robotika dan Vision</p>
                         </div>
                     </div>
                 </div>

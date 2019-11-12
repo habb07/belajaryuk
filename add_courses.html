@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Profil | Media Belajar</title>
+    <title>Tambah Kursus | Media Belajar</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
     <link rel="stylesheet" type="text/css" href="css/main_style.css" />
@@ -18,16 +18,33 @@
             text-align: left;
         }
         
-        .kotak_wrapper p {
+        #kontak p {
             padding: 2px;
-            border-bottom: 1px solid white;
-            color: white;
         }
         
-        #kanan1 p {
-            padding: 2px;
-            border-bottom: 1px solid white;
-            color: white;
+        #kontak p:not(:nth-child(4)) {
+            border-bottom: 1px solid black;
+        }
+        
+        #sosmed {
+            font-size: 30px;
+        }
+        
+        .lbl_form:not(:first-child) {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        
+        #form_tanya {
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        #form_tanya input,
+        #form_tanya textarea {
+            padding: 7px;
+            width: 95%;
         }
         
         #kirim_form {
@@ -43,18 +60,19 @@
     <div class="header">
         <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
         <div class="dropdown">
-            <button class="button info" id="dropbtnpf" onclick="myButton()"><img src="icon/user.png" style="width:13%"> Habibullah Dzaky M</button>
+            <button class="button info" id="dropbtnpf" onclick="myButton()"><img src="icon/user.png" style="width:25%">
+                Admin</button>
             <div class="droppf-content" id="myDropdown">
-                <a href="profil.html">Profil</a>
                 <a href="login.html">Log out</a>
             </div>
         </div>
+
     </div>
 
     <div id="navbar">
-        <a href="dashboard.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="dashboardAdmin.html"><img src="icon/home.png" style="width:69%"></a>
         <a class="active" href="javascript:void(0)">Kursus Saya</a>
-        <a href="about.html">Tentang</a>
+        <a href="about_admin.html">Tentang</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -68,47 +86,56 @@
 
     <div class="main-body">
         <div id="wrapper">
-            <text id="jdl">Profil</text>
+            <text id="jdl">Dasbor Admin</text>
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
-                        <h4>Foto Profil</h4>
-                        <img src="icon/user.png" style="width: 20%">
-                        <p class="baris">Nama : Habibullah Dzaky Musthafa</p>
-                        <p class="baris">Email : habibdm@ut.ac.id</p>
-                        <p class="baris">No. Telepon : 081999888777</p>
-                        <p class="baris">Jenis Kelamin : Laki-laki</p>
-                        <a class="button danger" style="float: right;" onclick="href='edit_profil.html'">Edit Profil</a>
+                        <h4>Tambah Kursus</h4>
+                        <p class="baris">Nama Kursus : <input class="inputan" type="text" name="name" autofocus=""></p>
+                        <p class="baris">Kategori Kursus :
+                            <select class="select_k">
+                                    <option value="f1" selected>Fakultas Teknik</option>
+                                    <option value="f2">Fakultas Ilmu Komputer</option>
+                                    <option value="f3">Fakultas Kedokteran</option>
+                                    <option value="f4">Fakultas MIPA</option>
+                                    <option value="f5">Fakultas Ilmu Budaya</option>
+                                    <option value="f6">Fakultas Hukum</option>
+                                    <option value="f7">Fakultas Keperawatan</option>
+                                    <option value="f8">Fakultas Pertanian</option>
+                                    <option value="f9">Fakultas Kesehatam</option>
+                                    <option value="f10">Fakultas Kedokteran Gigi</option>
+                                    <option value="f11">FEB </option>
+                                    <option value="f12">FISIP </option>
+                                  </select></p>
+                        <a href="dashboardAdmin.html"><button class="button success" style="float: right;">Simpan</button></a>
                     </div>
                 </div>
                 <div class="kol-4">
                     <div id="kanan1" class="kotak_wrapper">
                         <p class="baris" id="db"><b><a href="dashboard.html">Dasbor</a></b></p>
-                        <p class="baris">Beranda Situs</p>
+                        <p class="baris"><a href="index.html">Beranda Situs</a></p>
                         <p class="baris">Kalender</p>
-                        <p class="baris">Kursus yang saya ikuti</p>
+                        <p class="baris">Kursus yang ada</p>
                         <div id="kr">
                             <p>Perancangan Website</p>
                             <p>Pemrograman Berbasis Framework</p>
                             <p>Pengukuran dan Implementasi Perangkat Lunak</p>
+                            <p>Teknik Robotika dan Vision</p>
+                            <p>Kalkulus 1</p>
+                            <p>Kalkulus 2</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 
 
-
     <div class="footer">
         <div class="foot-col">
             <h4>Tentang Media Belajar</h4>
-
             <li><a href="about.html">Tentang kami</a></li>
             <li><a href="contact.html">Kontak kami</a></li>
-
         </div>
 
         <div class="foot-col">

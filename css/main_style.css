@@ -39,6 +39,13 @@ img {
     color: white;
 }
 
+#kanan1 p,
+.db {
+    padding: 2px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
 #kanan3 {
     right: 1000;
 }
@@ -49,6 +56,101 @@ img {
 
 #kr {
     padding-left: 15px;
+}
+
+
+/* search */
+
+.search {
+    width: 150px;
+    padding: 8px 15px;
+    background: white;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+.select_fl {
+    width: 150px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+.select_jk,
+.inputan,
+.select_k {
+    width: 200px;
+    padding: 8px 15px;
+    background: white;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    font-size: 14;
+}
+
+
+/* wrapper */
+
+#wrapper {
+    padding: 40px;
+    font-family: 'Century Gothic';
+    font-size: 24px;
+}
+
+#isi_wrapper {
+    padding: 15px;
+    width: 95%;
+    margin: auto;
+}
+
+.kotak_wrapper {
+    padding: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    background-color: #6699FF;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+    font-family: 'Century Gothic';
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.kotak_wrapper #top {
+    color: white;
+}
+
+.kotak_wrapper #btntmbh {
+    float: right;
+    width: 190px;
+    height: 35px;
+}
+
+.kotak_wrapper2 {
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    font-family: 'Century Gothic';
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.kotak_wrapper3 {
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    font-family: 'Century Gothic';
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #dbdbdb;
+}
+
+#alamat,
+#kontak,
+#tanya {
+    color: white;
+}
+
+#ct {
+    color: white;
 }
 
 
@@ -258,20 +360,6 @@ img {
     background-color: #6699FF;
     color: white;
 }
-
-
-/* icon */
-
-
-/* .fa {
-    padding: 10px;
-    font-size: 0px;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-} */
 
 .fa:hover {
     opacity: 0.7;

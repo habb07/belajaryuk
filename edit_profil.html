@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Profil | Media Belajar</title>
+    <title>Edit Profil | Media Belajar</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
     <link rel="stylesheet" type="text/css" href="css/main_style.css" />
@@ -13,30 +13,6 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
     <style type="text/css">
-        #wrapper {
-            padding: 40px;
-            font-family: 'Century Gothic';
-            font-size: 24px;
-        }
-        
-        #isi_wrapper {
-            padding: 15px;
-            width: 95%;
-            margin: auto;
-        }
-        
-        .kotak_wrapper {
-            padding: 20px;
-            margin-right: 20px;
-            margin-top: 15px;
-            background-color: #6699FF;
-            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
-            font-family: 'Century Gothic';
-            font-size: 16px;
-            border-radius: 6px;
-            color: white;
-        }
-        
         .span_kontak {
             margin-left: 20%;
             text-align: left;
@@ -61,16 +37,17 @@
             font-size: 18px;
         }
         
-        .search,
-        .select_jk,
-        .inputan {
-            width: 200px;
-            /* margin-left: 150px; */
-            padding: 8px 15px;
-            background: white;
-            border: 0px solid #dbdbdb;
-            border-radius: 6px;
-            font-size: 14;
+        .pic {
+            border-radius: 4px;
+            background-color: #6699FF;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
         }
     </style>
 </head>
@@ -108,6 +85,9 @@
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
+                        <h4>Foto Profil</h4>
+                        <img src="icon/user.png" style="width: 20%"><br>
+                        <input type="file" class="pic" accept="image/*">
                         <p class="baris">Nama : <input class="inputan" type="text" name="name" value="Habibullah Dzaky Musthafa" autofocus=""></p>
                         <p class="baris">Email : <input class="inputan" type="email" name="email" value="habibdm@ut.ac.id"></p>
                         <p class="baris">No. Telepon : <input class="inputan" type="text" name="nohp" value="081999888777"></p>
@@ -115,17 +95,14 @@
                                 <option value="jk1" selected> Laki-laki </option>
                                 <option value="jk2"> Perempuan</option>
                               </select></p>
-                        <a class="button success" style="float: right;" onclick="href='profil.html'">Simpan</a>
+                        <a href="profil.html"><button class="button success" style="float: right;">Simpan</button></a>
                     </div>
                 </div>
                 <div class="kol-4">
                     <div id="kanan1" class="kotak_wrapper">
-                        <a href="dashboard.html">
-                            <h3>Dasbor</h3>
-                        </a>
+                        <p class="baris" id="db"><b><a href="dashboard.html">Dasbor</a></b></p>
                         <p class="baris">Beranda Situs</p>
                         <p class="baris">Kalender</p>
-                        <p class="baris">Timeline</p>
                         <p class="baris">Kursus yang saya ikuti</p>
                         <div id="kr">
                             <p>Perancangan Website</p>
