@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Kursus | Media Belajar</title>
+    <title>Tambah Kursus | Media Belajar</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
     <link rel="stylesheet" type="text/css" href="css/main_style.css" />
@@ -59,13 +59,20 @@
 <body>
     <div class="header">
         <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
-        <a class="button info" style="float: right;" onclick="href='login.html'">Masuk</a>
+        <div class="dropdown">
+            <button class="button info" id="dropbtnpf" onclick="myButton()"><img src="icon/user.png" style="width:25%">
+                Admin</button>
+            <div class="droppf-content" id="myDropdown">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+
     </div>
 
     <div id="navbar">
-        <a href="index.html"><img src="icon/home.png" style="width:69%"></a>
+        <a href="dashboardAdmin.html"><img src="icon/home.png" style="width:69%"></a>
         <a class="active" href="javascript:void(0)">Kursus Saya</a>
-        <a href="about.html">Tentang</a>
+        <a href="about_admin.html">Tentang</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -79,16 +86,17 @@
 
     <div class="main-body">
         <div id="wrapper">
-            <text id="jdl">Kursus</text>
+            <text id="jdl">Dasbor Admin</text>
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
-                        <div id="kategori">
-                            <text id="top">Kategori Kursus :
-                                <select class="select_k">
-                                    <option value="f1" >Fakultas Teknik</option>
+                        <h4>Edit Kursus</h4>
+                        <p class="baris">Nama Kursus : <input class="inputan" type="text" name="name" value="Kalkulus 1" autofocus=""></p>
+                        <p class="baris">Kategori Kursus :
+                            <select class="select_k">
+                                    <option value="f1" selected>Fakultas Teknik</option>
                                     <option value="f2">Fakultas Ilmu Komputer</option>
-                                    <option value="f3" selected>Fakultas Kedokteran</option>
+                                    <option value="f3">Fakultas Kedokteran</option>
                                     <option value="f4">Fakultas MIPA</option>
                                     <option value="f5">Fakultas Ilmu Budaya</option>
                                     <option value="f6">Fakultas Hukum</option>
@@ -98,33 +106,24 @@
                                     <option value="f10">Fakultas Kedokteran Gigi</option>
                                     <option value="f11">FEB </option>
                                     <option value="f12">FISIP </option>
-                                  </select></text>
-                        </div>
-                        <text id="top">Pencarian Kursus :
-                            <input class="search" type="text" placeholder="Cari" required>
-                        </text>
-                        <div class="kotak_wrapper2">
-                            <select class="select_fl">
-                                        <option value="fl1" selected>Semua</option>
-                                        <option value="fl2"> Dalam Progress</option>
-                                        <option value="fl3"> Selesai</option>
-                                      </select>
-                            <div id="urutan">
-                                <text>Urutan berdasarkan :
-                                    <select class="select_fl">
-                                                <option value="f1" selected> Nama </option>
-                                                <option value="f2"> Terakhir diakses</option>
-                                              </select></text>
-                            </div>
-
-                        </div>
+                                  </select></p>
+                        <a href="dashboardAdmin.html"><button class="button success" style="float: right;">Simpan</button></a>
                     </div>
                 </div>
                 <div class="kol-4">
                     <div id="kanan1" class="kotak_wrapper">
-                        <a href="index.html">
-                            <h3>Depan</h3>
-                        </a>
+                        <p class="baris" id="db"><b><a href="dashboard.html">Dasbor</a></b></p>
+                        <p class="baris"><a href="index.html">Beranda Situs</a></p>
+                        <p class="baris">Kalender</p>
+                        <p class="baris">Kursus yang ada</p>
+                        <div id="kr">
+                            <p>Kalkulus 1</p>
+                            <p>Kalkulus 2</p>
+                            <p>Perancangan Website</p>
+                            <p>Pemrograman Berbasis Framework</p>
+                            <p>Pengukuran dan Implementasi Perangkat Lunak</p>
+                            <p>Teknik Robotika dan Vision</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,21 +131,18 @@
     </div>
 
 
-
-    <div class="footer ">
-        <div class="foot-col ">
+    <div class="footer">
+        <div class="foot-col">
             <h4>Tentang Media Belajar</h4>
-
-            <li><a href="about.html ">Tentang kami</a></li>
-            <li><a href="contact.html ">Kontak kami</a></li>
-
+            <li><a href="about.html">Tentang kami</a></li>
+            <li><a href="contact.html">Kontak kami</a></li>
         </div>
 
-        <div class="foot-col ">
-            <div class="foot-col-in ">
-                <!-- <div id="ft "> -->
-                <li><a href="requirement.html ">Syarat dan Ketentuan</a></li>
-                <li><a href="policy.html ">Kebijakan Privasi</a></li>
+        <div class="foot-col">
+            <div class="foot-col-in">
+                <!-- <div id="ft"> -->
+                <li><a href="requirement.html">Syarat dan Ketentuan</a></li>
+                <li><a href="policy.html">Kebijakan Privasi</a></li>
                 <!-- </div> -->
             </div>
         </div>
@@ -161,9 +157,10 @@
         </div>
     </div>
 
-    <script src="js/navbar.js "></script>
-    <script src="js/slideshow.js "></script>
-    <script src="js/jquery-3.4.1.min.js "></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/btnpf.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 </body>
 
 </html>
