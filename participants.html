@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Beranda | Media Belajar</title>
+    <title>Perancangan Website | Media Belajar</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
     <link rel="stylesheet" type="text/css" href="css/main_style.css" />
@@ -62,6 +62,7 @@
         <a href="dashboard.html"><img src="icon/home.png" style="width:69%"></a>
         <a class="active" href="javascript:void(0)">Kursus Saya</a>
         <a href="about_user.html">Tentang</a>
+        <a href="participants.html">Peserta</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -75,41 +76,64 @@
 
     <div class="main-body">
         <div id="wrapper">
-            <text id="jdl">Dasbor</text>
+            <text id="jdl">Peserta</text>
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
-                        <text id="top">Pencarian Kursus :
+                        <text id="top">Pencarian :
                             <input class="search" type="text" placeholder="Cari" required>
                         </text>
                         <div class="kotak_wrapper2">
                             <select class="select_fl">
-                                        <option value="fl1" selected>Semua</option>
-                                        <option value="fl2"> Dalam Progress</option>
-                                        <option value="fl3"> Selesai</option>
+                                        <option value="fl1" selected></option>
+                                        <option value="fl2"> Dosen</option>
+                                        <option value="fl3"> Mahasiswa</option>
                                       </select>
                             <div id="urutan">
                                 <text>Urutan berdasarkan :
                                     <select class="select_fl">
                                                 <option value="f1" selected> Nama </option>
-                                                <option value="f2"> Terakhir diakses</option>
+                                                <option value="f2"> Terakhir akses</option>
                                               </select></text>
                             </div>
-                            <a href="detail_courses1.html" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Pemrograman Berbasis Framework</h3>
-                                </div>
-                            </a>
-                            <a href="detail_courses2.html" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Pengukuran dan Implementasi Perangkat Lunak</h3>
-                                </div>
-                            </a>
-                            <a href="detail_courses3.html" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Perancangan Website</h3>
-                                </div>
-                            </a>
+                            <div class="kotak_wrapper3">
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Peran</th>
+                                    </tr>
+                                    <tr>
+                                        <td>AHMAD FAUZAL ADIFIA 162410101119</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AHMAD FIRDAUS ABABIL 162410101054</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AULIA RETA FAULINA 182410101096</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENDAH WAHYU SAFITRI 182410101055</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HABIBULLAH DZAKY M 162410101132</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mohammad Zarkasi 199011112019031018</td>
+                                        <td>Dosen</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NISVI MAULIDYAH 182410101102</td>
+                                        <td>Mahasiswa</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+
                             <br>
                             <text>Tampilkan :</text>
                             <select class="select_fl">
@@ -133,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="kol-4">
+                <div class="kol-4" style="float: right;">
                     <div id="kanan2" class="kotak_wrapper">
                         <div class="kalender">
                             <h3>Oktober</h3>
