@@ -43,8 +43,6 @@ body {
 
 #navbar a.active {
     background-color: #6699FF;
-    color: white;
-    height: 52px;
 }
 
 .content {

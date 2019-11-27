@@ -13,34 +13,8 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
     <style type="text/css">
-        .kalender {
-            width: 200px;
-            /* margin: auto; */
-        }
-        
-        .kalender h3 {
-            color: white;
-        }
-        
-        th {
-            background-color: orange;
-            color: white;
-            font-family: calibri;
-        }
-        
-        td {
-            /* text-align: center; */
-            background-color: white;
-            font-family: calibri;
-        }
-        
-        #red {
-            color: red;
-        }
-        
-        h1 {
-            text-align: center;
-            font-family: calibri
+        #tbl th {
+            font-family: 'Century Gothic';
         }
     </style>
 </head>
@@ -49,19 +23,19 @@
     <div class="header">
         <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
         <div class="dropdown">
-            <button class="button info" id="dropbtnpf" onclick="myButton()"><img src="icon/user.png" style="width:13%"> Habibullah Dzaky M</button>
+            <button class="button info" id="dropbtnpf" onclick="myButton()"><i class="fas fa-user-circle"></i> Habibullah Dzaky M</button>
             <div class="droppf-content" id="myDropdown">
-                <a href="profil.html">Profil</a>
-                <a href="login.html">Log out</a>
+                <a href="profil.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
             </div>
         </div>
     </div>
 
     <div id="navbar">
-        <a href="dashboard.html"><img src="icon/home.png" style="width:69%"></a>
-        <a class="active" href="javascript:void(0)">Kursus Saya</a>
-        <a href="about_user.html">Tentang</a>
-        <a href="participants.html">Peserta</a>
+        <a href="dashboard.html"><i class="fas fa-home"></i></a>
+        <a class="active" href="javascript:void(0)"><i class="fas fa-book"></i> Kursus Saya</a>
+        <a href="about_user.html"><i class="fas fa-exclamation-circle"></i> Tentang</a>
+        <a href="participants.html"><i class="fas fa-users"></i> Peserta</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -80,17 +54,17 @@
                 <div class="kol-8">
                     <div class="kotak_wrapper">
                         <text style="color: white; font-size: x-large;"><b>Quiz 1</b></text>
-                        <a href="detail_courses3.html"><button class="buttont default" id="btntmbh" >Kembali</button></a>
+                        <a href="detail_courses3.html"><button class="buttont danger" id="back" ><i class="fas fa-angle-double-left"></i> Kembali</button></a>
                         <br><br>
                         <div class="kotak_wrapper2">
-                            <p style="text-align: center;">Kuis ini ditutup pada hari Selasa, 17 September 2019, 07.51 AM
+                            <p style="text-align: center;">Kuis ini ditutup pada hari Selasa, 17 September 2019, 7.51 AM
                                 <br> Batas Waktu: 15 menit
                                 <br>Metode Penilaian: Nilai tertinggi
                             </p>
                             <div class="kotak_wrapper3">
                                 <text style="font-size: x-large;"><b>Ringkasan dari upaya kamu sebelumnya</b></text>
                                 <br><br>
-                                <table style="width:100%; text-align: left;">
+                                <table style="width:100%; text-align: left;" id="tbl">
                                     <tr>
                                         <th>Upaya</th>
                                         <th>Status</th>
@@ -107,17 +81,24 @@
                             <select class="select_fl">
                                     <option value="fl1" selected>Lompat ke...</option>
                                     <option value="fl2">PPT - Pendahuluan Desain Web</option>
-                                    <option value="fl3"> Quiz 1</option>
+                                    <option value="fl3"> Tugas 1</option>
+                                    <option value="fl4"> PPT 1</option>
+                                    <option value="fl5"> PPT 2</option>
+                                    <option value="fl6"> Quiz 1</option>
+                                    <option value="fl7"> Kehadiran</option>
                                   </select>
                         </div>
+                        <br>
+                        <a href="task.html" style="float: left; color: white;"><i class="fa fa-caret-left"></i> Tugas 1</a>
+                        <a href="attendance.html" style="float: right; color: white;">Kehadiran <i class="fa fa-caret-right"></i></a>
+                        <br>
                     </div>
                 </div>
                 <div class="kol-4">
                     <div id="kanan1" class="kotak_wrapper">
-                        <p class="baris" id="db"><b><a href="dashboard.html">Dasbor</a></b></p>
-                        <p class="baris"><a href="index.html">Beranda Situs</a></p>
-                        <p class="baris">Kalender</p>
-                        <p class="baris">Kursus yang saya ikuti</p>
+                        <p class="baris" id="db"><b><a href="dashboard.html"><i class="fas fa-home"></i> Dasbor</a></b></p>
+                        <p class="baris"><a href="calender.html"><i class="fas fa-calendar-alt"></i> Kalender</a></p>
+                        <p class="baris"><i class="fas fa-book"></i> Kursus yang saya ikuti</p>
                         <div id="kr">
                             <p><a href="detail_courses1.html">Pemrograman Berbasis Framework</a></p>
                             <p><a href="detail_courses2.html">Pengukuran dan Implementasi Perangkat Lunak</a></p>
@@ -128,8 +109,11 @@
                 <div class="kol-4" style="float: right;">
                     <div id="kanan2" class="kotak_wrapper">
                         <div class="kalender">
-                            <h3>Oktober</h3>
-                            <table style="text-align: center;">
+                            <h3>
+                                <a href="#" style="float: left; color: white;"><i class="fa fa-caret-left"></i> Okt</a> November 2019
+                                <a href="#" style="float: right; color: white;">Des <i class="fa fa-caret-right"></i></a>
+                            </h3>
+                            <table>
                                 <tr>
                                     <th>Minggu</th>
                                     <th>Senin</th>
@@ -142,47 +126,47 @@
                                 <tr>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                     <td>1</td>
                                     <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
                                 </tr>
                                 <tr>
-                                    <td id="red">6</td>
+                                    <td id="red">3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
                                     <td>7</td>
                                     <td>8</td>
                                     <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
                                 </tr>
                                 <tr>
-                                    <td id="red">13</td>
+                                    <td id="red">10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
                                     <td>14</td>
                                     <td>15</td>
                                     <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
                                 </tr>
                                 <tr>
-                                    <td id="red">20</td>
+                                    <td id="red">17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
                                     <td>21</td>
                                     <td>22</td>
                                     <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
                                 </tr>
                                 <tr>
-                                    <td id="red">27</td>
+                                    <td id="red">24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
                                     <td>28</td>
                                     <td>29</td>
                                     <td>30</td>
-                                    <td>31</td>
-                                    <td></td>
-                                    <td></td>
                                 </tr>
                             </table>
                         </div>

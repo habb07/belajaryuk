@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Pemrograman Berbasis Framework | Media Belajar</title>
+    <title>Perancangan Website | Media Belajar</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
     <link rel="stylesheet" type="text/css" href="css/main_style.css" />
@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
     <style type="text/css">
-
+        #tbl th {
+            font-family: 'Century Gothic';
+        }
     </style>
 </head>
 
@@ -33,7 +35,7 @@
         <a href="dashboard.html"><i class="fas fa-home"></i></a>
         <a class="active" href="javascript:void(0)"><i class="fas fa-book"></i> Kursus Saya</a>
         <a href="about_user.html"><i class="fas fa-exclamation-circle"></i> Tentang</a>
-        <a href="#"><i class="fas fa-users"></i> Peserta</a>
+        <a href="participants.html"><i class="fas fa-users"></i> Peserta</a>
         <div class="dropdown">
             <button class="dropbtn">Indonesia
                 <i class="fa fa-caret-down"></i>
@@ -47,37 +49,61 @@
 
     <div class="main-body">
         <div id="wrapper">
-            <text id="jdl">Pemrograman Berbasis Framework</text>
+            <text id="jdl">Kehadiran</text>
             <div id="isi_wrapper" class="baris">
                 <div class="kol-8">
                     <div class="kotak_wrapper">
-                        <text id="top">Pencarian :
-                            <input class="search" type="text" placeholder="Cari" required>
-                        </text>
+                        <text style="color: white; font-size: x-large;"><b>Mockup</b></text>
+                        <a href="detail_courses3.html"><button class="buttont danger" id="back" ><i class="fas fa-angle-double-left"></i> Kembali</button></a>
+                        <br><br>
                         <div class="kotak_wrapper2">
-                            <select class="select_fl">
-                                        <option value="fl1" selected>Semua</option>
-                                        <option value="fl2"> Dalam Progress</option>
-                                        <option value="fl3"> Selesai</option>
-                                      </select>
-                            <div id="urutan">
-                                <text>Urutan berdasarkan :
-                                    <select class="select_fl">
-                                                <option value="f1" selected> Nama </option>
-                                                <option value="f2"> Terakhir diakses</option>
-                                              </select></text>
-                            </div>
                             <div class="kotak_wrapper3">
-                                <h3>Kontrak Kuliah</h3>
+                                <text style="font-size: x-large;"><b>Ringkasan dari upaya kamu sebelumnya</b></text>
+                                <br><br>
+                                <table style="width:100%; text-align: left;" id="tbl">
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Deskripsi</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Selasa, 10 Sep 2019 7.00AM - 8.40AM</td>
+                                        <td>Sesi kelas reguler</td>
+                                        <td>Hadir</td>
+                                    </tr>
+
+                                </table>
                             </div>
+
                             <br>
-                            <text>Tampilkan :</text>
                             <select class="select_fl">
-                                    <option value="fl1" selected>12</option>
-                                    <option value="fl2"> 24</option>
-                                    <option value="fl3"> 36</option>
+                                    <option value="fl1" selected>Lompat ke...</option>
+                                    <option value="fl2">PPT - Pendahuluan Desain Web</option>
+                                    <option value="fl3"> Tugas 1</option>
+                                    <option value="fl4"> PPT 1</option>
+                                    <option value="fl5"> PPT 2</option>
+                                    <option value="fl6"> Quiz 1</option>
+                                    <option value="fl7"> Kehadiran</option>
                                   </select>
+                            <a href="#"><button class="buttont success" id="btnModal" ><i class="fas fa-edit"></i> Ubah Kehadiran</button></a>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <text>Kehadiran :</text>
+                                    <form action="">
+                                        <input type="radio" name="attendance" value="hadir"> Hadir
+                                        <input type="radio" name="attendance" value="sakit"> Sakit
+                                        <input type="radio" name="attendance" value="ijin"> Ijin
+                                        <input type="radio" name="attendance" value="alpa"> Alpa
+                                    </form>
+                                    <br>
+                                    <a href="#"><button class="buttont info" id="save_modal"><i class="fas fa-save"></i> Simpan</button></a>
+                                </div>
+                            </div>
                         </div>
+                        <br>
+                        <a href="quiz.html" style="float: left; color: white;"><i class="fa fa-caret-left"></i> Quiz 1</a>
+                        <br>
                     </div>
                 </div>
                 <div class="kol-4">
@@ -196,6 +222,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/btnpf.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
 </body>
 

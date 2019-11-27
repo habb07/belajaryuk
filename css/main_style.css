@@ -78,6 +78,34 @@ img {
     color: white;
 }
 
+.select_tgl,
+.select_pkl {
+    width: 60px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    color: white;
+}
+
+.select_bln {
+    width: 110px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    color: white;
+}
+
+.select_thn {
+    width: 80px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    color: white;
+}
+
 .select_jk,
 .inputan,
 .select_k {
@@ -87,6 +115,32 @@ img {
     border: 0px solid #dbdbdb;
     border-radius: 6px;
     font-size: 14;
+}
+
+.inModal {
+    width: 200px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    font-size: 14;
+    color: white;
+}
+
+.inFileModal {
+    width: 300px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    font-size: 14;
+    color: white;
+}
+
+#save_modal {
+    text-align: center;
+    width: 100px;
+    height: 35px;
 }
 
 
@@ -119,7 +173,13 @@ img {
     color: white;
 }
 
-.kotak_wrapper #btntmbh {
+.kotak_wrapper #btnModal {
+    float: right;
+    width: 190px;
+    height: 35px;
+}
+
+.kotak_wrapper #back {
     float: right;
     width: 190px;
     height: 35px;
@@ -152,6 +212,98 @@ img {
 
 #ct {
     color: white;
+}
+
+
+/* kalender */
+
+.kalender {
+    width: 100%;
+}
+
+.kalender h3 {
+    color: white;
+    text-align: center;
+}
+
+.kalender table {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    background-color: orange;
+    color: white;
+    font-family: calibri;
+}
+
+td {
+    background-color: white;
+}
+
+#red {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    font-family: calibri
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    text-align: center;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid #6699FF;
+    border-radius: 20px;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 

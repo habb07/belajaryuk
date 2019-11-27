@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalender | Media Belajar</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/brands.css">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html"><img src="image/logo t.png" style="width:11%"></a>
+        <div class="dropdown">
+            <button class="button info" id="dropbtnpf" onclick="myButton()"><i class="fas fa-user-circle"></i> Habibullah Dzaky M</button>
+            <div class="droppf-content" id="myDropdown">
+                <a href="profil.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <a href="dashboard.html"><i class="fas fa-home"></i></a>
+        <a class="active" href="javascript:void(0)"><i class="fas fa-book"></i> Kursus Saya</a>
+        <a href="about_user.html"><i class="fas fa-exclamation-circle"></i> Tentang</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Indonesia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Indonesia</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div id="wrapper">
+            <text id="jdl">Kalender</text>
+            <div id="isi_wrapper" class="baris">
+                <div class="kol-8">
+                    <div class="kotak_wrapper">
+                        <div class="kotak_wrapper2">
+                            <text>Tampilan bulan terperinci untuk:</text><br>
+                            <select class="select_fl">
+                                <option value="fl1" selected>Semua</option>
+                                <option value="fl2">Kalkulus 1</option>
+                                <option value="fl3">Kalkulus 2</option>
+                                <option value="fl3">Pemrograman Berbasis Framework</option>
+                                <option value="fl3">Pengukuran dan Implementasi Perangkat Lunak</option>
+                                <option value="fl3">Perancangan Website</option>
+                                <option value="fl3">Teknik Robotika dan Vision</option>
+                              </select>
+                            <a href="#"><button class="buttont info" id="btnModal" ><i class="fas fa-calendar-plus"></i> Event baru</button></a>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>Judul Event : <input class="inModal" type="text" name="name" autofocus=""></p>
+                                    <p>Tanggal :
+                                        <select class="select_tgl">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28" selected>28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                          </select>
+                                        <select class="select_bln">
+                                                <option value="b1">Januari</option>
+                                                <option value="b2">Februari</option>
+                                                <option value="b3">Maret</option>
+                                                <option value="b4">April</option>
+                                                <option value="b5">Mei</option>
+                                                <option value="b6">Juni</option>
+                                                <option value="b7">Juli</option>
+                                                <option value="b8">Agustus</option>
+                                                <option value="b9">September</option>
+                                                <option value="b10">Oktober</option>
+                                                <option value="b11" selected>November</option>
+                                                <option value="b12">Desember</option>
+                                              </select>
+                                        <select class="select_thn">
+                                                    <option value="y1">2001</option>
+                                                    <option value="y2">2002</option>
+                                                    <option value="y3">2003</option>
+                                                    <option value="y4">2004</option>
+                                                    <option value="y5">2005</option>
+                                                    <option value="y6">2006</option>
+                                                    <option value="y7">2007</option>
+                                                    <option value="y8">2008</option>
+                                                    <option value="y9">2009</option>
+                                                    <option value="y10">2010</option>
+                                                    <option value="y11">2011</option>
+                                                    <option value="y12">2012</option>
+                                                    <option value="y13">2013</option>
+                                                    <option value="y14">2014</option>
+                                                    <option value="y15">2015</option>
+                                                    <option value="y16">2016</option>
+                                                    <option value="y17">2017</option>
+                                                    <option value="y18">2018</option>
+                                                    <option value="y19" selected>2019</option>
+                                                    <option value="y20">2020</option>
+                                                    <option value="y21">2021</option>
+                                                    <option value="y22">2022</option>
+                                                    <option value="y23">2023</option>
+                                                    <option value="y24">2024</option>
+                                                    <option value="y25">2025</option>
+                                                    <option value="y26">2026</option>
+                                                    <option value="y27">2027</option>
+                                                    <option value="y28">2028</option>
+                                                    <option value="y29">2029</option>
+                                                    <option value="y30">2030</option>
+                                                  </select>
+                                    </p>
+                                    <p>Waktu :
+                                        <select class="select_pkl">
+                                                    <option value="00">00</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                  </select>
+                                        <select class="select_pkl">
+                                                        <option value="00">00</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                        <option value="32">32</option>
+                                                        <option value="33">33</option>
+                                                        <option value="34">34</option>
+                                                        <option value="35">35</option>
+                                                        <option value="36">36</option>
+                                                        <option value="37">37</option>
+                                                        <option value="38">38</option>
+                                                        <option value="39">39</option>
+                                                        <option value="40">40</option>
+                                                        <option value="41">41</option>
+                                                        <option value="42">42</option>
+                                                        <option value="43">43</option>
+                                                        <option value="44">44</option>
+                                                        <option value="45">45</option>
+                                                        <option value="46">46</option>
+                                                        <option value="47">47</option>
+                                                        <option value="48">48</option>
+                                                        <option value="49">49</option>
+                                                        <option value="50">50</option>
+                                                        <option value="51">51</option>
+                                                        <option value="52">52</option>
+                                                        <option value="53">53</option>
+                                                        <option value="54">54</option>
+                                                        <option value="55">55</option>
+                                                        <option value="56">56</option>
+                                                        <option value="57">57</option>
+                                                        <option value="58">58</option>
+                                                        <option value="59">59</option>
+                                                      </select>
+                                    </p>
+                                    <a href="#"><button class="buttont info" id="save_modal">Save</button></a>
+                                </div>
+                            </div>
+                            <div class="kotak_wrapper3">
+                                <a href="#" style="float: left; color: black;"><i class="fa fa-caret-left"></i> Oktober 2019</a>
+                                <text style="font-size: x-large; margin-left: 15%;"><b>November 2019</b></text>
+                                <a href="#" style="float: right; color: black;">Desember 2019 <i class="fa fa-caret-right"></i></a>
+                                <br><br>
+                                <table style="width:100%; text-align: center;">
+                                    <tr>
+                                        <th>Minggu</th>
+                                        <th>Senin</th>
+                                        <th>Selasa</th>
+                                        <th>Rabu</th>
+                                        <th>Kamis</th>
+                                        <th>Jumat</th>
+                                        <th>Sabtu</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="red">3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="red">10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="red">17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="red">24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="kol-4">
+                    <div id="kanan1" class="kotak_wrapper">
+                        <p class="baris" id="db"><b><a href="dashboard.html"><i class="fas fa-home"></i> Dasbor</a></b></p>
+                        <p class="baris"><a href="calender.html"><i class="fas fa-calendar-alt"></i> Kalender</a></p>
+                        <p class="baris"><i class="fas fa-book"></i> Kursus yang saya ikuti</p>
+                        <div id="kr">
+                            <p><a href="detail_courses1.html">Pemrograman Berbasis Framework</a></p>
+                            <p><a href="detail_courses2.html">Pengukuran dan Implementasi Perangkat Lunak</a></p>
+                            <p><a href="detail_courses3.html">Perancangan Website</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kol-4" style="float: right;">
+                    <div id="kanan2" class="kotak_wrapper">
+                        <div class="kalender">
+                            <h3>Oktober 2019</h3>
+                            <table>
+                                <tr>
+                                    <th>Minggu</th>
+                                    <th>Senin</th>
+                                    <th>Selasa</th>
+                                    <th>Rabu</th>
+                                    <th>Kamis</th>
+                                    <th>Jumat</th>
+                                    <th>Sabtu</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <h3>November 2019</h3>
+                            <table>
+                                <tr>
+                                    <th>Minggu</th>
+                                    <th>Senin</th>
+                                    <th>Selasa</th>
+                                    <th>Rabu</th>
+                                    <th>Kamis</th>
+                                    <th>Jumat</th>
+                                    <th>Sabtu</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                            <h3>Desember 2019</h3>
+                            <table>
+                                <tr>
+                                    <th>Minggu</th>
+                                    <th>Senin</th>
+                                    <th>Selasa</th>
+                                    <th>Rabu</th>
+                                    <th>Kamis</th>
+                                    <th>Jumat</th>
+                                    <th>Sabtu</th>
+                                </tr>
+                                <tr>
+                                    <td id="red">1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td id="red">29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="foot-col">
+            <h4>Tentang Media Belajar</h4>
+
+            <li><a href="about.html">Tentang kami</a></li>
+            <li><a href="contact.html">Kontak kami</a></li>
+
+        </div>
+
+        <div class="foot-col">
+            <div class="foot-col-in">
+                <!-- <div id="ft"> -->
+                <li><a href="requirement.html">Syarat dan Ketentuan</a></li>
+                <li><a href="policy.html">Kebijakan Privasi</a></li>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-line">
+        <b>&copy; 2019 Media Belajar. All Right Reserved.</b>
+        <div id="social_media">
+            <a href="https://facebook.com/mediabelajar" target="_blank"><i class="fab fa-facebook"></i></a>&ensp;
+            <a href="https://twitter.com/mediabelajar" target="_blank"><i class="fab fa-twitter"></i></a>&ensp;
+            <a href="https://youtube.com/mediabelajar" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/btnpf.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
