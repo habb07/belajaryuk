@@ -106,6 +106,15 @@ img {
     color: white;
 }
 
+.select_km {
+    width: 200px;
+    padding: 8px 15px;
+    background: #6699FF;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    color: white;
+}
+
 .select_jk,
 .inputan,
 .select_k {

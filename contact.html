@@ -62,6 +62,11 @@
             font-size: 16px;
             border-radius: 6px;
         }
+        
+        #form {
+            border: 1px solid white;
+            border-radius: 6px;
+        }
     </style>
 </head>
 
@@ -80,9 +85,10 @@
                     <input type="password" name="pass" placeholder="Password" required><br>
                 </form>
                 <div id="div_register">
-                    <a id="btn_masuk" class="button info">Masuk</a>
-                    <a href="forget_pass.html" class="button danger">Lupa Password</a>
+                    <a id="btn_masuk" class="button info"><i class="fas fa-sign-in-alt"></i> Masuk</a>
+                    <a href="forget_pass.html" class="button danger"><i class="fas fa-question-circle"></i> Lupa Password</a>
                 </div>
+                <br><br>
             </div>
         </div>
     </div>
@@ -147,19 +153,19 @@
                         </p>
                         <form id="form_tanya">
                             <label class="lbl_form">Nama</label>
-                            <input type="text" name="nama">
+                            <input id="form" type="text" name="nama">
 
                             <label class="lbl_form">Email</label>
-                            <input type="email" name="email">
+                            <input id="form" type="email" name="email">
 
                             <label class="lbl_form">Nomor HP</label>
-                            <input type="text" name="no_hp">
+                            <input id="form" type="text" name="no_hp">
 
                             <label class="lbl_form">Subjek</label>
-                            <input type="text" name="subjek">
+                            <input id="form" type="text" name="subjek">
 
                             <label class="lbl_form">Pertanyaan atau Pesan</label>
-                            <textarea rows="5"></textarea>
+                            <textarea id="form" rows="5"></textarea>
 
                             <div id="kirim_form">
                                 <a href="contact.html"><button class="button danger">Kirim</button></a>
