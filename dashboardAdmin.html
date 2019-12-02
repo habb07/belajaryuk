@@ -74,10 +74,10 @@
                                     <option value="f11">FEB </option>
                                     <option value="f12">FISIP </option>
                                   </select></p>
-                                <a href="#"><button class="buttont info" id="save_modal"><i class="fas fa-save"></i> Simpan</button></a>
+                                <a href="#"><button class="button info" id="save_modal"><i class="fas fa-save"></i> Simpan</button></a>
                             </div>
                         </div>
-                        <div class="kotak_wrapper2">
+                        <div class="kotak_wrapper2" id="list_matkul" page="">
                             <select class="select_fl">
                                 <option value="fl1" selected>Semua</option>
                                 <option value="fl2"> Dalam Progress</option>
@@ -120,15 +120,15 @@
                                     <h3>Teknik Robotika dan Vision</h3>
                                 </div>
                             </a>
-
-                            <br>
-                            <text>Tampilkan :</text>
-                            <select class="select_fl">
+                        </div>
+                        <br>
+                        <text style="color: white;">Tampilkan :</text>
+                        <select class="select_tl">
                                 <option value="fl1" selected>12</option>
                                 <option value="fl2"> 24</option>
                                 <option value="fl3"> 36</option>
                             </select>
-                        </div>
+                        <button class="buttont success" id="load_btn"><i class="fas fa-caret-down"></i> Lagi</button>
                     </div>
                 </div>
                 <div class="kol-4">
@@ -252,6 +252,49 @@
     <script src="js/btnpf.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/modal.js"></script>
+    <script>
+        $("#load_btn").click(function() {
+            var page = $("#list_matkul").attr("page");
+            page = Number(page);
+
+            if (page == "") {
+                page = 1;
+            } else {
+                page += 1;
+            }
+
+            $("#list_matkul").attr("page", page);
+            if (page == 2) {
+                $("#load_btn").hide();
+            }
+            var path = "json/matkul_" + page + ".json";
+
+            $.ajax({
+                    url: path,
+                    type: 'GET',
+                    dataType: 'json'
+                })
+                .done(function(hasil) {
+                    console.log("success");
+                    var gabung = "";
+                    $.each(hasil, function(index, val) {
+                        gabung += `
+                    <a href="#" style="color: black;">
+                        <div class="kotak_wrapper3">
+                            <h3>` + val.judul + `</h3>
+                        </div>
+                    </a>
+                    `;
+                    });
+                    $("#list_matkul").append(gabung);
+                })
+                .fail(function(msg, err) {
+                    console.log("Error");
+                    console.log(msg);
+                    console.log(err);
+                });
+        });
+    </script>
 </body>
 
 </html>

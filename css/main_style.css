@@ -78,6 +78,14 @@ img {
     color: white;
 }
 
+.select_tl {
+    width: 150px;
+    padding: 8px 15px;
+    background: white;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+}
+
 .select_tgl,
 .select_pkl {
     width: 60px;
@@ -185,6 +193,12 @@ img {
 .kotak_wrapper #btnModal {
     float: right;
     width: 190px;
+    height: 35px;
+}
+
+.kotak_wrapper #load_btn {
+    float: right;
+    width: 150px;
     height: 35px;
 }
 
