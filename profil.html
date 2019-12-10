@@ -19,18 +19,10 @@
             color: white;
         }
         
-        #profil {
-            border-radius: 100px;
-        }
-        
         .kotak_wrapper #btnModal {
             float: right;
-            width: 120px;
+            width: 150px;
             height: 45px;
-        }
-        
-        #mdl {
-            color: black;
         }
         
         .select_jk,
@@ -80,19 +72,19 @@
                 <div class="kol-8">
                     <div class="kotak_wrapper">
                         <h4 style="color: white;">Foto Profil</h4>
-                        <img id="profil" src="image/fotoprofil.jpg" style="width: 20%">
+                        <img id="profil" src="image/fotoprofil.jpg">
                         <p class="baris">Nama : Habibullah Dzaky Musthafa</p>
                         <p class="baris">Email : habibdm@ut.ac.id</p>
                         <p class="baris">No. Telepon : 081999888777</p>
                         <p class="baris">Jenis Kelamin : Laki-laki</p>
 
-                        <a id="btnModal" class="button danger">Edit Profil</a>
+                        <a id="btnModal" class="button danger"><i class="fas fa-edit"></i> Ubah Profil</a>
                         <div id="myModal" class="modal">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <h4 id="mdl">Foto Profil</h4>
-                                <img id="profil" src="image/fotoprofil.jpg" style="width: 20%"><br>
-                                <input type="file" class="pic" accept="image/*">
+                                <img id="image-preview" src="image/fotoprofil.jpg" alt="image preview"><br>
+                                <input type="file" accept="image/*" id="image-source" onchange="previewImage();">
                                 <p id="mdl">Nama : <input class="inputan" type="text" name="name" value="Habibullah Dzaky Musthafa" autofocus=""></p>
                                 <p id="mdl">Email : <input class="inputan" type="email" name="email" value="habibdm@ut.ac.id"></p>
                                 <p id="mdl">No. Telepon : <input class="inputan" type="text" name="nohp" value="081999888777"></p>
@@ -159,6 +151,17 @@
     <script src="js/btnpf.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/modal.js"></script>
+    <script>
+        function previewImage() {
+            document.getElementById("image-preview");
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                document.getElementById("image-preview").src = oFREvent.target.result;
+            };
+        };
+    </script>
 </body>
 
 </html>
