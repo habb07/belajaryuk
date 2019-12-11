@@ -84,7 +84,7 @@
                                 <span class="close">&times;</span>
                                 <h4 id="mdl">Foto Profil</h4>
                                 <img id="image-preview" src="image/fotoprofil.jpg" alt="image preview"><br>
-                                <input type="file" accept="image/*" id="image-source" onchange="previewImage();">
+                                <input type="file" accept="image/*" id="image-source">
                                 <p id="mdl">Nama : <input class="inputan" type="text" name="name" value="Habibullah Dzaky Musthafa" autofocus=""></p>
                                 <p id="mdl">Email : <input class="inputan" type="email" name="email" value="habibdm@ut.ac.id"></p>
                                 <p id="mdl">No. Telepon : <input class="inputan" type="text" name="nohp" value="081999888777"></p>
@@ -152,15 +152,19 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/modal.js"></script>
     <script>
-        function previewImage() {
-            document.getElementById("image-preview");
-            var oFReader = new FileReader();
-            oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+        $.fn.previewImage = function() {
+            this.change(function() {
+                document.getElementById("image-preview");
+                var oFReader = new FileReader();
+                oFReader.readAsDataURL(this.files[0]);
 
-            oFReader.onload = function(oFREvent) {
-                document.getElementById("image-preview").src = oFREvent.target.result;
-            };
-        };
+                oFReader.onload = function(oFREvent) {
+                    document.getElementById("image-preview").src = oFREvent.target.result;
+                };
+            });
+        }
+
+        $("#image-source").previewImage();
     </script>
 </body>
 
