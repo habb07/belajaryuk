@@ -199,7 +199,16 @@
     <script src="js/navbar.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/modal.js"></script>
+    <!-- <script src="js/modal.js"></script> -->
+    <script>
+        $('#btnModal').click(function() {
+            $('#myModal').addClass('showModal');
+        });
+        $('.close').click(function() {
+            $('#myModal').addClass('hideModal');
+            $('#myModal').removeClass('showModal');
+        });
+    </script>
     <script type="text/javascript">
         $("#btn_masuk").click(function(event) {
             event.preventDefault();

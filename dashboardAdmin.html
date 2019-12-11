@@ -87,36 +87,38 @@
                                         <option value="f2"> Terakhir diakses</option>
                                     </select></text>
                             </div>
-                            <a href="edit_courses.html" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Kalkulus 1</h3>
-                                </div>
-                            </a>
-                            <a href="#" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Kalkulus 2</h3>
-                                </div>
-                            </a>
-                            <a href="#" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Pemrograman Berbasis Framework</h3>
-                                </div>
-                            </a>
-                            <a href="#" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Pengukuran dan Implementasi Perangkat Lunak</h3>
-                                </div>
-                            </a>
-                            <a href="#" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Perancangan Website</h3>
-                                </div>
-                            </a>
-                            <a href="#" style="color: black;">
-                                <div class="kotak_wrapper3">
-                                    <h3>Teknik Robotika dan Vision</h3>
-                                </div>
-                            </a>
+                            <div class="bungkus">
+                                <a href="edit_courses.html" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Kalkulus 1</h3>
+                                    </div>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Kalkulus 2</h3>
+                                    </div>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Pemrograman Berbasis Framework</h3>
+                                    </div>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Pengukuran dan Implementasi Perangkat Lunak</h3>
+                                    </div>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Perancangan Website</h3>
+                                    </div>
+                                </a>
+                                <a href="#" style="color: black;">
+                                    <div class="kotak_wrapper3">
+                                        <h3>Teknik Robotika dan Vision</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                         <br>
                         <text style="color: white;">Tampilkan :</text>
@@ -272,6 +274,7 @@
                     dataType: 'json'
                 })
                 .done(function(hasil) {
+                    $(".bungkus").html("");
                     console.log("success");
                     var gabung = "";
                     $.each(hasil, function(index, val) {
@@ -283,7 +286,7 @@
                     </a>
                     `;
                     });
-                    $("#list_matkul").append(gabung);
+                    $(".bungkus").append(gabung);
                 })
                 .fail(function(msg, err) {
                     console.log("Error");
